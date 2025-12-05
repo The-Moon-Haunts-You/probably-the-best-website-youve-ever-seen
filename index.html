@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>My Amazing Web 3.0 Site</title>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        background: url("https://www.animatedimages.org/data/media/619/animated-snow-image-0037.gif");
+        background-repeat: repeat;
+        font-family: "Comic Sans MS", "Papyrus", cursive;
+        color: lime;
+        margin: 0;
+        cursor: crosshair;
+      }
+
+      marquee {
+        font-size: 32px;
+        font-weight: bold;
+        color: yellow;
+        background: red;
+        text-shadow: 2px 2px 5px black;
+      }
+
+      .container {
+        border: 10px ridge magenta;
+        margin: 50px;
+        padding: 30px;
+        background: rgba(0, 0, 0, 0.8);
+        box-shadow: 0 0 50px cyan;
+        transform: rotate(-1deg);
+      }
+
+      h1 {
+        font-size: 60px;
+        text-align: center;
+        text-decoration: underline overline wavy hotpink;
+        letter-spacing: 5px;
+        animation: spinny 5s infinite linear;
+      }
+
+      @keyframes spinny {
+        0% { transform: rotate(0deg) scale(1); color: lime; }
+        25% { transform: rotate(5deg) scale(1.2); color: cyan; }
+        50% { transform: rotate(-5deg) scale(0.9); color: orange; }
+        75% { transform: rotate(10deg) scale(1.1); color: hotpink; }
+        100% { transform: rotate(0deg) scale(1); color: lime; }
+      }
+
+      .blink { animation: blinky 0.4s infinite; }
+      @keyframes blinky {
+        0% { opacity: 1; }
+        50% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+
+      .rainbow-text {
+        background: linear-gradient(90deg, red, orange, yellow, green, cyan, blue, violet);
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+
+      .awful-table {
+        width: 100%;
+        border: 8px double lime;
+        border-collapse: separate;
+        border-spacing: 10px 20px;
+      }
+
+      .awful-table td,
+      .awful-table th {
+        border: 5px dotted hotpink;
+        padding: 20px;
+        background: repeating-linear-gradient(
+          45deg,
+          #ff0000,
+          #ff0000 10px,
+          #0000ff 10px,
+          #0000ff 20px
+        );
+      }
+
+      .awful-button {
+        padding: 20px 40px;
+        font-size: 30px;
+        background: lime;
+        color: red;
+        border-radius: 50%;
+        border: 8px groove gold;
+        text-transform: uppercase;
+        letter-spacing: 8px;
+        box-shadow: 0 0 20px yellow;
+      }
+
+      .awful-button:hover {
+        transform: scale(1.3) rotate(10deg);
+        background: red;
+        color: lime;
+      }
+
+      .popup {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        background: yellow;
+        color: black;
+        border: 5px solid red;
+        padding: 20px;
+        font-size: 18px;
+        z-index: 9999;
+        width: 250px;
+      }
+
+      .counter {
+        font-size: 50px;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .scrolling-div {
+        height: 150px;
+        overflow: scroll;
+        border: 5px solid cyan;
+        background: black;
+        color: #0f0;
+        font-family: "Courier New", monospace;
+        font-size: 12px;
+        white-space: pre;
+      }
+
+      .guestbook {
+        border: 6px inset #fff;
+        padding: 10px;
+        margin-top: 20px;
+        background: purple;
+      }
+
+      .guestbook textarea {
+        width: 100%;
+        height: 80px;
+        background: black;
+        color: lime;
+        font-family: "Comic Sans MS";
+      }
+
+      .best-viewed {
+        font-size: 10px;
+        text-align: center;
+        margin-top: 40px;
+      }
+    </style>
+
+    <script>
+      alert("WELCOME TO MY AWESOME WEBSITE!!!");
+      alert("BEST VIEWED IN INTERNET EXPLORER 6");
+
+      let hits = Math.floor(Math.random() * 900000) + 100000;
+      function incrementHits() {
+        hits++;
+        document.getElementById("hit-counter").textContent = hits;
+      }
+
+      setInterval(function () {
+        for (let i = 0; i < 1000000; i++) Math.sqrt(i);
+      }, 3000);
+
+      window.onbeforeunload = function () {
+        return "Are you SURE you want to leave my cool website?";
+      };
+
+      setInterval(function () {
+        document.body.style.backgroundColor =
+          "rgb(" +
+          Math.floor(Math.random() * 255) + "," +
+          Math.floor(Math.random() * 255) + "," +
+          Math.floor(Math.random() * 255) + ")";
+      }, 700);
+
+      setInterval(function () {
+        document.title =
+          document.title === "My Amazing Web 3.0 Site"
+            ? "🔥🔥🔥 CLICK HERE 🔥🔥🔥"
+            : "My Amazing Web 3.0 Site";
+      }, 500);
+    </script>
+  </head>
+
+  <body onload="incrementHits()">
+    <marquee behavior="alternate" scrollamount="25">
+      🎄❄️🎅 WELCOME TO MY ULTRA HOLIDAY WEBSITE 🎅❄️🎄
+    </marquee>
+
+    <div class="container">
+      <h1 class="blink">
+        <span class="rainbow-text">SEASON'S GREETINGS!!!</span>
+      </h1>
+
+      <center>
+        <img src="https://www.animatedimages.org/data/media/710/animated-construction-image-0020.gif">
+        <img src="https://www.animatedimages.org/data/media/710/animated-construction-image-0047.gif">
+      </center>
+
+      <p>
+        <b><i><u>This is my extremely festive professional website.</u></i></b>
+        Made entirely in <font color="cyan" size="5">NOTEPAD</font>.
+      </p>
+
+      <table class="awful-table">
+        <tr><th>Section</th><th>Quality</th><th>Notes</th></tr>
+        <tr><td>Holiday Spirit</td><td>🎄🎄🎄🎄🎄</td><td>Too much?</td></tr>
+        <tr><td>Performance</td><td>💾</td><td>Requires 64GB RAM*</td></tr>
+        <tr><td>UX</td><td>🤡</td><td>Users cry (festively)</td></tr>
+      </table>
+
+      <div class="counter">
+        VISITORS:
+        <span id="hit-counter" class="blink">000000</span>
+      </div>
+
+      <center>
+        <button class="awful-button" onclick="incrementHits()">
+          HOLIDAY CLICK
+        </button>
+      </center>
+
+      <h3>Scrolling Hacker Logs</h3>
+      <div class="scrolling-div">
+ACCESS GRANTED...
+HACKING THE NORTH POLE...
+BREACHING SANTA'S MAINFRAME...
+UPLOADING 2TB OF COOKIES...
+DOWNLOADING PRESENTS...
+      </div>
+
+      <div class="guestbook">
+        <h3>SIGN MY HOLIDAY GUESTBOOK!!!</h3>
+        <form>
+          Name:
+          <input type="text" value="Festive Legend"><br><br>
+          Message:<br>
+          <textarea>snow intensifies</textarea><br>
+          <input type="submit" value="Submit (Does Nothing)">
+        </form>
+      </div>
+
+      <div class="popup">
+        🎁 <b>HOLIDAY BONUS!!!</b><br><br>
+        You are the 1,000,000th snowflake!!!<br><br>
+        <i>(probably)</i><br><br>
+      </div>
+    </div>
+
+    <div class="best-viewed">
+      Best viewed in 800x600 • Internet Explorer 4.01 • 56k modem • Snowstorm conditions
+    </div>
+  </body>
+</html>
